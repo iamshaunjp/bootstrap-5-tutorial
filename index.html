@@ -66,7 +66,10 @@
           <a href="#pricing" class="btn btn-secondary btn-lg">Buy Now</a>
         </div>
         <div class="col-md-5 text-center d-none d-md-block">
-          <img src="/assets/ebook-cover.png" class="img-fluid" alt="ebook">
+          <!-- tooltip -->
+          <span class="tt" data-bs-placement="bottom" title="Net Ninja Pro book cover">
+            <img src="/assets/ebook-cover.png" class="img-fluid" alt="ebook">
+          </span>
         </div>
       </div>
     </div>
@@ -311,6 +314,12 @@
                 <i class="bi bi-envelope-fill text-secondary"></i>
               </span>
               <input type="text" id="email" class="form-control" placeholder="e.g. mario@example.com" />
+              <!-- tooltip -->
+              <span class="input-group-text">
+                <span class="tt" data-bs-placement="bottom" title="Enter an email address we can reply to.">
+                  <i class="bi bi-question-circle text-muted"></i>
+                </span>
+              </span>
             </div>
             <label for="name" class="form-label">Name:</label>
             <div class="mb-4 input-group">
@@ -318,6 +327,12 @@
                 <i class="bi bi-person-fill text-secondary"></i>
               </span>
               <input type="text" id="name" class="form-control" placeholder="e.g. Mario" />
+              <!-- tooltip -->
+              <span class="input-group-text">
+                <span class="tt" data-bs-placement="bottom" title="Pretty self explanatory really...">
+                  <i class="bi bi-question-circle text-muted"></i>
+                </span>
+              </span>
             </div>
             <label for="subject" class="form-label">What is your question about?</label>
             <div class="mb-4 input-group">
@@ -347,5 +362,11 @@
 
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <script>
+    const tooltips = document.querySelectorAll('.tt')
+    tooltips.forEach(t => {
+      new bootstrap.Tooltip(t)
+    })
+  </script>
 </body>
 </html>
